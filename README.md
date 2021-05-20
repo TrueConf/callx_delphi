@@ -1,5 +1,12 @@
 # callx_delphi
 
+This example demonstrates the implementation of the [TrueConf CallX](https://developers.trueconf.com/sdk-for-windows) component written in Delphi with IDE Embarcadero RAD Studio:
+
+- create a component on the fly while the application is running
+- connect to TrueConf Server
+- address book operations (get contact list and statuses, make calls)
+- select AV peripherals (camera, microphone, speakers)
+
 ## AddressBook
 
 How to work with users address book
