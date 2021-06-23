@@ -25,3 +25,5 @@ Selection of the current camera.
 
 ![crs](https://user-images.githubusercontent.com/20208639/56128649-f14c2100-5f88-11e9-82cd-9bb917e328e4.png)
 
+## See also
+- [How to create a new application](https://sdk.trueconf.com/tutorial/how-to-create-new-application)
