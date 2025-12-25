@@ -71,8 +71,6 @@ type
     FMyDetailInfo: string;
   protected
     procedure WriteLog(ALine: string);
-    // show settings form
-    procedure ShowConfigurator;
     procedure UpdateAddressBook;
   public
     { Public declarations }
@@ -290,7 +288,7 @@ end;
 procedure TfrmAddressBook.miConnectionSettingClick(Sender: TObject);
 begin
   if FStarted then
-    ShowConfigurator;
+    ShowConfigurator(CallX);
 end;
 
 procedure TfrmAddressBook.miExitClick(Sender: TObject);
@@ -303,20 +301,6 @@ begin
   if TfrmHardware.ShowDialog(self, TfrmConfigurator.GetRegKey, CallX) then
   begin
 
-  end;
-end;
-
-{ Show setting form}
-procedure TfrmAddressBook.ShowConfigurator;
-var FullProgPath: PAnsiChar;
-begin
-  with TfrmConfigurator.Create(self) do
-  begin
-    CallX := self.CallX;
-    if ShowModal = mrOk then
-    begin
-
-    end;
   end;
 end;
 

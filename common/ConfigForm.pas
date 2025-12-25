@@ -62,6 +62,8 @@ type
     property CallX: TTrueConfCallX read FCallX write FCallX;
   end;
 
+  function ShowConfigurator(ACallX: TTrueConfCallX): boolean;
+
 implementation
 
 uses Registry, rcstrings, HardwareForm, LogUnit, ShellApi;
@@ -233,6 +235,18 @@ begin
     end;
   finally
     Free;
+  end;
+end;
+
+function ShowConfigurator(ACallX: TTrueConfCallX): boolean;
+var FullProgPath: PAnsiChar;
+begin
+  Result := False;
+  with TfrmConfigurator.Create(Application) do
+  begin
+    CallX := ACallX;
+    { Show modal }
+    Result := (ShowModal = mrOk);
   end;
 end;
 

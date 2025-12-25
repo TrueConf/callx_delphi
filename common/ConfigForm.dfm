@@ -64,7 +64,6 @@ object frmConfigurator: TfrmConfigurator
     object TabSheet2: TTabSheet
       Caption = 'Server and Authorization'
       ImageIndex = 2
-      ExplicitLeft = 5
       DesignSize = (
         669
         450)

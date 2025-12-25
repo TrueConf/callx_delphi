@@ -75,10 +75,6 @@ object frmAddressBook: TfrmAddressBook
       Align = alClient
       Caption = 'Address Book'
       TabOrder = 1
-      ExplicitLeft = 120
-      ExplicitTop = 72
-      ExplicitWidth = 185
-      ExplicitHeight = 105
       object lvAddressBook: TListView
         Left = 2
         Top = 18
@@ -122,10 +118,6 @@ object frmAddressBook: TfrmAddressBook
     Align = alClient
     Caption = 'TrueConf SDK for Windows Control aka CallX'
     TabOrder = 1
-    ExplicitLeft = 480
-    ExplicitTop = 168
-    ExplicitWidth = 185
-    ExplicitHeight = 105
     object CallX: TTrueConfCallX
       Left = 2
       Top = 18
@@ -142,9 +134,9 @@ object frmAddressBook: TfrmAddressBook
       OnServerConnected = CallXServerConnected
       OnXError = CallXXError
       OnXLoginError = CallXXLoginError
-      ExplicitLeft = 1
-      ExplicitTop = 17
-      ControlData = {000E0000AC2900005F250000}
+      ExplicitWidth = 504
+      ExplicitHeight = 452
+      ControlData = {000E000057290000B8230000}
     end
   end
   object MainMenu: TMainMenu
@@ -199,7 +191,7 @@ object frmAddressBook: TfrmAddressBook
     Left = 32
     Top = 248
     Bitmap = {
-      494C010105000800340010001000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010105000800380010001000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
       0000000000000000000000000000000000000000000000000000000000009FA3
       A3FF000000000000000000000000000000000000000000000000000000000000

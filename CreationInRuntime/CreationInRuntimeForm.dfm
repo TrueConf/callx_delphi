@@ -31,8 +31,9 @@ object frmCreationInRuntime: TfrmCreationInRuntime
     Width = 411
     Height = 553
     Align = alClient
+    Constraints.MinHeight = 200
+    Constraints.MinWidth = 200
     TabOrder = 0
-    ExplicitWidth = 433
     object FlowPanel: TFlowPanel
       Left = -1
       Top = -1
@@ -71,10 +72,6 @@ object frmCreationInRuntime: TfrmCreationInRuntime
       ReadOnly = True
       ScrollBars = ssVertical
       TabOrder = 0
-      ExplicitLeft = 448
-      ExplicitTop = 0
-      ExplicitWidth = 252
-      ExplicitHeight = 553
     end
   end
 end

@@ -34,9 +34,36 @@ type
     property UserData[Index: Integer]: TUserData read GetUserItem; default;
   end;
 
+  function JSON_ParticipantsListToText(AJSONText: string): string;
+
 implementation
 
 { TAddressBook }
+
+function JSON_ParticipantsListToText(AJSONText: string): string;
+var
+  JSON, jParticipants, jItem: TJSONValue;
+  i: Integer;
+  sUserID: string;
+begin
+  Result := '';
+  JSON := TJSONObject.ParseJSONValue(AJSONText);
+  if JSON is TJSONObject then
+  begin
+    jParticipants := TJSONObject(JSON).GetValue('participants');
+    if jParticipants is TJSONArray then
+      for i := 0 to TJSONArray(jParticipants).Count - 1 do
+      begin
+        jItem := TJSONArray(jParticipants).Items[i];
+        sUserID := TJSONObject(jItem).GetValue('peerId').Value;
+
+        if i <> 0 then
+          Result := Result + #13#10;
+
+        Result := Result + sUserID;
+      end;
+  end;
+end;
 
 function CompareUsers(Item1, Item2: Pointer): Integer;
 begin

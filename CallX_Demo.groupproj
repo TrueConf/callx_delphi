@@ -9,6 +9,9 @@
         <Projects Include="CreationInRuntime\CreationInRuntime.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="ChangeVideoMatrix\ChangeVideoMatrix.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -35,14 +38,23 @@
     <Target Name="CreationInRuntime:Make">
         <MSBuild Projects="CreationInRuntime\CreationInRuntime.dproj" Targets="Make"/>
     </Target>
+    <Target Name="ChangeVideoMatrix">
+        <MSBuild Projects="ChangeVideoMatrix\ChangeVideoMatrix.dproj"/>
+    </Target>
+    <Target Name="ChangeVideoMatrix:Clean">
+        <MSBuild Projects="ChangeVideoMatrix\ChangeVideoMatrix.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ChangeVideoMatrix:Make">
+        <MSBuild Projects="ChangeVideoMatrix\ChangeVideoMatrix.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="AddressBook;CreationInRuntime"/>
+        <CallTarget Targets="AddressBook;CreationInRuntime;ChangeVideoMatrix"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="AddressBook:Clean;CreationInRuntime:Clean"/>
+        <CallTarget Targets="AddressBook:Clean;CreationInRuntime:Clean;ChangeVideoMatrix:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="AddressBook:Make;CreationInRuntime:Make"/>
+        <CallTarget Targets="AddressBook:Make;CreationInRuntime:Make;ChangeVideoMatrix:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
